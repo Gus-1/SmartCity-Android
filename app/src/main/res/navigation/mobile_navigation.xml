@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_event">
+
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="com.example.smartcity.view.fragments.MyEventListFragment"
+        android:label="@string/menu_event"
+        tools:layout="@layout/fragment_my_events">
+        <action
+            android:id="@+id/action_nav_myEvents_to_myEventDetailsFragment"
+            app:destination="@id/myEventDetailsFragment"
+            />
+        <action
+            android:id="@+id/action_myEvent_to_nav_createEventFragment"
+            app:destination="@id/createEventFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myEventDetailsFragment"
+        android:name="com.example.smartcity.view.fragments.MyEventDetailsFragment"
+        android:label="@layout/fragment_my_event_details">
+        <action
+            android:id="@+id/action_eventDetailsFragment_to_nav_myEvents"
+            app:destination="@id/nav_event"
+            />
+        <action
+            android:id="@+id/action_myEventDetailsFragment_to_updateMyEventFragment"
+            app:destination="@id/updateMyEventFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.example.smartcity.view.fragments.CreateEventFragment"
+        android:label="@layout/fragment_create_event">
+        <action
+            android:id="@+id/action_createEventFragment_to_nav_myEvents"
+            app:destination="@id/nav_event"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="com.example.smartcity.view.fragments.MessageFragment"
+        android:label="@string/menu_message"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.smartcity.view.fragments.SearchEventListFragment"
+        android:label="@string/menu_search_event"
+        tools:layout="@layout/fragment_search_event">
+        <action
+            android:id="@+id/action_nav_events_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment"
+        />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.example.smartcity.view.fragments.SearchEventDetailsFragment"
+        android:label="EventDetailsFragment">
+        <action
+            android:id="@+id/action_eventDetailsFragment_to_nav_events"
+            app:destination="@id/nav_search"
+        />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateMyEventFragment"
+        android:name="com.example.smartcity.view.fragments.UpdateMyEventFragment"
+        android:label="UpdateMyEventFragment">
+
+        <action
+            android:id="@+id/action_updateMyEventFragment_to_myEventDetailsFragment"
+            app:destination="@id/myEventDetailsFragment" />
+    </fragment>
+
+</navigation>

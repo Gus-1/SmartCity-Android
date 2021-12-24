@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/calendar_event_icon_151492"
+            android:title="@string/menu_event" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/send_message_3"
+            android:title="@string/menu_message" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/free_search_icon_3076_thumb"
+            android:title="@string/menu_search_event" />
+        <item
+            android:id="@+id/log_out"
+            android:icon="?attr/actionModeCloseDrawable"
+            android:title="@string/log_out" />
+    </group>
+</menu>
